@@ -1,16 +1,17 @@
 
 export function renderFood(food) {
     const foodList = document.createElement('li');
-    foodList.classList.add('food-list');
+    foodList.classList.add('food-item');
 
     
     const foodImg = document.createElement('img');
     foodImg.src = food.img;
     
-    const foodHeader = document.createElement('h3');
-    foodHeader.textContent = food.name;
+    const foodSpan = document.createElement('span');
+    foodSpan.textContent = food.name;
+    foodSpan.classList.add('food-name');
    
     
-    foodList.append(foodImg, foodHeader);
+    foodList.append(foodImg, foodSpan);
     return foodList;
 }
